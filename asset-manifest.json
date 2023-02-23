@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.978f61d4.js",
+    "main.js": "/static/js/main.3ccd13ad.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Elite.PNG": "/static/media/Elite.6d40c3d5de9a3fe68d76.PNG",
     "static/media/Gurpreet_Sandha_Resume.pdf": "/static/media/Gurpreet_Sandha_Resume.02c6e717749fde1a9835.pdf",
     "static/media/Profile.PNG": "/static/media/Profile.c0069cb10d48aaa16547.PNG",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.978f61d4.js.map": "/static/js/main.978f61d4.js.map",
+    "main.3ccd13ad.js.map": "/static/js/main.3ccd13ad.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.978f61d4.js"
+    "static/js/main.3ccd13ad.js"
   ]
 }
