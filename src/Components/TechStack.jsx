@@ -14,7 +14,7 @@ import reduxLogo from "../Assets/Tech_Stack/redux.png";
 import reactLogo from "../Assets/Tech_Stack/React1.png";
 import bootStrap from "../Assets/Tech_Stack/Bootstrap.jpg";
 import html from "../Assets/Tech_Stack/html5.png";
-
+import typeScript from "../Assets/Tech_Stack/TypeScript.png";
 import React from "react";
 
 const TechStack = () => {
@@ -22,6 +22,27 @@ const TechStack = () => {
     {
       name: "React",
       image: reactLogo,
+      "class-card": "skills-card",
+      "class-card-img": "skills-card-img",
+      "class-card-name": "skills-card-name",
+    },
+    {
+      name: "TypeScript",
+      image: typeScript,
+      "class-card": "skills-card",
+      "class-card-img": "skills-card-img",
+      "class-card-name": "skills-card-name",
+    },
+    {
+      name: "Redux",
+      image: reduxLogo,
+      "class-card": "skills-card",
+      "class-card-img": "skills-card-img",
+      "class-card-name": "skills-card-name",
+    },
+    {
+      name: "Javascript",
+      image: javaScript,
       "class-card": "skills-card",
       "class-card-img": "skills-card-img",
       "class-card-name": "skills-card-name",
@@ -48,13 +69,7 @@ const TechStack = () => {
       "class-card-img": "skills-card-img",
       "class-card-name": "skills-card-name",
     },
-    {
-      name: "Javascript",
-      image: javaScript,
-      "class-card": "skills-card",
-      "class-card-img": "skills-card-img",
-      "class-card-name": "skills-card-name",
-    },
+
     {
       name: "Bootstrap",
       image: bootStrap,
@@ -69,13 +84,7 @@ const TechStack = () => {
       "class-card-img": "skills-card-img",
       "class-card-name": "skills-card-name",
     },
-    {
-      name: "Redux",
-      image: reduxLogo,
-      "class-card": "skills-card",
-      "class-card-img": "skills-card-img",
-      "class-card-name": "skills-card-name",
-    },
+
     {
       name: "Mongo DB",
       image: mongoDb,
@@ -111,19 +120,13 @@ const TechStack = () => {
             {techStack.map((el, i) => {
               return (
                 <VStack p="20px" key={el.name} className={el["class-card"]}>
-                
-                    <Image
-                      className={el["class-card-img"]}
-                      h="100%"
-                      maxW={i === 0 ? "60%" : "60px"}
-                      src={el.image}
-                    />
-                    <Text 
-                    className={el["class-card-name"]}
-                    >
-                    {el.name}
-                    </Text>
-                 
+                  <Image
+                    className={el["class-card-img"]}
+                    h="100%"
+                    maxW={i === 0 ? "60%" : "60px"}
+                    src={el.image}
+                  />
+                  <Text className={el["class-card-name"]}>{el.name}</Text>
                 </VStack>
               );
             })}

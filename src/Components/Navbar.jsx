@@ -11,19 +11,19 @@ import {
   Avatar,
   Link,
 } from "@chakra-ui/react";
-import logo from "../Assets/Utils/v.png"
+import logo from "../Assets/Utils/v.png";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Link as ReachLink } from "react-scroll";
-import resume from "../Assets/Utils/Gurpreet_Sandha_Resume.pdf"
+import resume from "../Assets/Utils/Gurpreet_Sandha_Resume.pdf";
 
 const navItem = [
-  { path: "home", name: "Home" ,className:"nav-link home"},
-  { path: "about", name: "About" ,className:"nav-link about"},
-  { path: "skills", name: "Skills",className:"nav-link skills" },
-  { path: "projects", name: "Projects",className:"nav-link projects" },
-  { path: "activity", name: "Activity"},
-  { path: "contact", name: "Contact",className:"nav-link contact" },
+  { path: "home", name: "Home", className: "nav-link home" },
+  { path: "about", name: "About", className: "nav-link about" },
+  { path: "skills", name: "Skills", className: "nav-link skills" },
+  { path: "projects", name: "Projects", className: "nav-link projects" },
+  { path: "activity", name: "Activity" },
+  { path: "contact", name: "Contact", className: "nav-link contact" },
 ];
 
 // const secondryColor = "#2442d7";
@@ -36,7 +36,7 @@ export default function Navbar() {
       <chakra.header
         w="full"
         px={{ base: 2, sm: 4 }}
-        py={4}
+        // py={2}
         shadow="md"
         position="fixed"
         top="0"
@@ -53,8 +53,17 @@ export default function Navbar() {
             display="flex"
             alignItems="center"
           >
-        <p style={{color:"#D7BEFF",fontSize:"20px",paddingLeft:"20px"}}> gsandha.io </p>
-          </chakra.a> 
+            <p
+              style={{
+                color: "#D7BEFF",
+                fontSize: "20px",
+                paddingLeft: "20px",
+              }}
+            >
+              {" "}
+              gsandha.io{" "}
+            </p>
+          </chakra.a>
           <HStack spacing={3} display={{ base: "none", md: "flex" }}>
             {navItem.map((item, i) => {
               return (
@@ -63,7 +72,17 @@ export default function Navbar() {
                   key={item.path}
                   activeClass={"active"}
                   to={item.path}
-                  offset={item.path === "projects" ? -150 :item.path==="contact"? -70 :item.path==="activity"? -70 : item.path==="home"? -200 : -90}
+                  offset={
+                    item.path === "projects"
+                      ? -150
+                      : item.path === "contact"
+                      ? -70
+                      : item.path === "activity"
+                      ? -70
+                      : item.path === "home"
+                      ? -200
+                      : -90
+                  }
                   spy={true}
                   smooth={true}
                   duration={700}
@@ -80,17 +99,26 @@ export default function Navbar() {
                 </Link>
               );
             })}
-          
-           <Link className="nav-link resume" 
-         as={"a"}
-            backgroundColor="#4018B3" w="150px" h="60px"  borderRadius="10px" alignItems="center" textAlign="center"
+
+            <Link
+              className="nav-link resume"
+              as={"a"}
+              backgroundColor="#4018B3"
+              w="150px"
+              h="60px"
+              borderRadius="10px"
+              alignItems="center"
+              textAlign="center"
               display={{ base: "none", md: "flex" }}
               href="https://drive.google.com/uc?export=download&id=1-4LVo1ePnJFOI2c4pMk40caLVZMFqIUg"
-              onClick={() => {            
-                  window.open("https://drive.google.com/file/d/1-4LVo1ePnJFOI2c4pMk40caLVZMFqIUg/view?usp=sharing");
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/file/d/1-4LVo1ePnJFOI2c4pMk40caLVZMFqIUg/view?usp=sharing"
+                );
               }}
             >
-              <Button  id="resume-button-1"
+              <Button
+                id="resume-button-1"
                 // _hover={{ textDecoration: "none", bg: "white", color: "black" }}
                 variant="solid"
                 leftIcon={<AiOutlineDownload />}
@@ -162,4 +190,3 @@ export default function Navbar() {
     </div>
   );
 }
-
